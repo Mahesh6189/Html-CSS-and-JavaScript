@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" onsubmit="return func()">
+        <div class="container">
+            <div class="name">
+                <input type="text" id="email" placeholder="enter username or eamil id" >
+            </div>
+            <div class="name">
+                <input type="password" id="password" placeholder="Enter the password" >
+            </div>
+            <div class="name">
+                <input type="password" id="pasd" placeholder="confirm the password" >
+            </div>
+            <div class="name">
+                <button type="submit" class="submit">Login</button>
+            </div>
+        </div>
+    </form>
+    <script>
+        function func(){
+            let email=document.getElementById("email").value.trim();
+            let password=document.getElementById("password").value.trim();
+            let pasd=document.getElementById("pasd").value.trim();
+            let pattern= /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+            if(email===""||password===""||pasd==="")
+        {
+            alert("all fields are required");
+            return false;
+        }
+        if(!pattern.test(email))
+        {
+            alert("invalid imail address");
+            return false;
+        }
+        if(password.length<8)
+        {
+            alert("invalid password");
+            return false;
+        }
+        if(pasd!=password)
+        {
+            alert("password not match");
+            return false;
+        }
+        alert("password submitted successfully");
+        return true;
+
+        }
+    </script>
+</body>
+</html>
