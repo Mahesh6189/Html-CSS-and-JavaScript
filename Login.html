@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This is login form</title>
+</head>
+<body>
+    <form action="submit" onsubmit=" return func()">
+        <div >
+            <input id="name" type="text"Placeholder="enter your name">
+        </div>
+
+        <div >
+            <input id="email" type="email" placeholder="enter your email">
+        </div>
+
+        <div >
+            <input id="phone" type="text" placeholder="enter you phone number">
+        </div>
+        <button type="submit" class="submit">submit</button>
+    </form>
+</body>
+<script>
+    function func(){
+        let name=document.getElementById("name").value.trim();
+        let email=document.getElementById("email").value.trim();
+        let phone=document.getElementById("phone").value.trim();
+        if(name===""||email==="")
+    {
+        alert("all fields are required");
+        return false;
+    }
+    if(phone.length!=10 ||isNan(phone))
+    {
+        alert("invalid phone number");
+        return false;
+    }
+    return true;
+    alert("form submitted successfully");
+    }
+</script>
+</html>
