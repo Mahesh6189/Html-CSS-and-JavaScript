@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn1">click me</button>
+    <div id="container">hello</div>
+</body>
+<script>
+    btn1=document.querySelector("#btn1");
+    handler1=()=>{
+        alert("button is clicked");
+    }
+    btn1.addEventListener("mouseover",handler1);
+    
+    let container=document.querySelector("#container");
+    container.onmouseover=()=>{
+        container.style.color="blue";
+        container.style.backgroundColor="green";
+     };
+</script>
+</html>
