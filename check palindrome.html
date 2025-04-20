@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="num" placeholder="Enter a number">
+    </div>
+    <div>
+        <h2> result:<span id="res"></span></h2>
+    </div>
+    <button onclick="func()">check palindrome</button>
+</body>
+<script>
+    function func()
+    {
+        
+        let res=document.getElementById("res")
+        let num=document.getElementById("num").value;
+        let ans=0;
+        let n=parseInt(num);
+        while(n!=0)
+       {
+            let rem=n%10
+            ans=(ans*10)+rem
+            n=Math.floor(n/10);
+       }
+       
+       if(ans==parseInt(num)){
+       res.innerText="palindrome";
+       }
+       else{
+        res.innerText=" Not palindrome";
+       }
+    }
+</script>
+</html>
