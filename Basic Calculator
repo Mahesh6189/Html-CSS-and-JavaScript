@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="number" placeholder="enter a number" id="num1">
+    </div>
+    <div>
+        <input type="number" placeholder="enter second number" id="num2">
+    </div>
+    <button onclick="add()">add</button>
+    <button onclick="sub()">sub</button>
+    <button onclick="mul()">Multiplication</button>
+    <button onclick="div()">division</button>
+   <div style="border:solid black"> <h2> res:<span id="res"></span></h2></div>
+    <button id="ac">ac</button>
+</body>
+<script>
+    <!--addition-->
+     function add()
+    {
+           let num1=document.getElementById("num1").value.trim();
+        let num2=document.getElementById("num2").value.trim();
+        let num3= parseInt(num1)+Number(num2);
+        let result=document.getElementById("res");
+        res.innerText=num3;
+    }
+    <!--sub-->
+function sub()
+    {
+           let num1=document.getElementById("num1").value.trim();
+        let num2=document.getElementById("num2").value.trim();
+        let num3= parseInt(num1)-Number(num2);
+        let result=document.getElementById("res");
+        res.innerText=num3;
+    }
+
+
+<!--mul-->
+function mul()
+    {
+           let num1=document.getElementById("num1").value.trim();
+        let num2=document.getElementById("num2").value.trim();
+        let num3= parseInt(num1)*Number(num2);
+        let result=document.getElementById("res");
+        res.innerText=num3;
+    }
+<!--div-->
+function div()
+    {
+           let num1=document.getElementById("num1").value.trim();
+        let num2=document.getElementById("num2").value.trim();
+        let num3= parseInt(num1)/Number(num2);
+        let result=document.getElementById("res");
+        res.innerText=num3;
+    }
+
+
+    let ac=document.querySelector("#ac")
+    ac.onclick=()=>{
+        let res=document.getElementById("res");
+        res.innerText=" ";
+        let num1=document.getElementById("num1")
+        let num2=document.getElementById("num2")
+        num1.value=" ";
+        num2.value=" ";
+    }
+</script>
+</html>
