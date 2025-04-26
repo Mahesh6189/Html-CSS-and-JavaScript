@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="year" placeholder="Enter the year ">
+    
+   <h1> res:<span id="set" type="text"></span></h1> 
+   <button id="click" onclick="func()">check</button>
+</body>
+<script>
+    
+    function func(){
+        let year=document.getElementById("year").value
+        let y=parseInt(year);
+        let set=document.getElementById("set");
+     if((y%4===0&&y%100!==0)||y%400===0)
+     {
+        set.textContent="leap year"
+     }
+     else{
+        set.textContent="not a leap year"
+     }
+    }
+</script>
+</html>
