@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button onclick="createBox()" style="border:solid black">create</button>
+  <input type="text" placeholder="enter a number" id="num1">
+  <div id="container" style="display:flex; gap:4px; flex-wrap: wrap;"></div>
+</body>
+<script>
+function keyPress(){
+    if(event.key=="Enter")
+  {
+    createBox();
+  }
+  }
+
+  function createBox()
+  {
+    let newDiv=document.createElement("div");
+    newDiv.style.color="red";
+    newDiv.style.border="solid black";
+    newDiv.style.width="50px";
+    num1=document.getElementById("num1").value;
+    newDiv.innerText=num1;
+    let node=document.getElementById("container");
+   
+    node.appendChild(newDiv);
+  }
+  input=document.getElementById("num1");
+  input.addEventListener("keydown",keyPress);
+  
+</script>
+</html>
