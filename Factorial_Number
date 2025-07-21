@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="num">
+    </div>
+    <div>
+       <button onclick="func()">get</button>
+    </div>
+    <h2> Factorial:<span id="res"></span></h2>
+</body>
+<script>
+    function func(){
+        let n=document.getElementById("num").value;
+        let res=document.getElementById("res");
+        let ans=1;
+        for(let i=n;i>=1;i--)
+       {
+         ans=ans*i;
+       }
+       res.innerText=ans;
+       
+        
+    }
+</script>
+</html>
