@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" placeholder="enter the 'C temperature" id="temp">
+    </div>
+    <div>
+        <button onclick="func()">check</button>
+    </div>
+    <h2 id="res"><span></span></h2>
+</body>
+<script>
+    function func(){
+        let temp=document.getElementById("temp").value;
+        let res=((9/5)*temp)+32;
+        let ans=document.getElementById("res");
+        ans.innerText=res+"'F";
+    }
+</script>
+</html>
